@@ -35,8 +35,8 @@ K2: .string "I am a very long string that will surely exceed the maximum length 
 .data 4, 8, 1  5 , 16, 23, 42
 .data 4,8,15,16,23,4 +2
 .data  4, 8, 15, x, 16, 23, 42
-.data 4097
-.data -4097
+.data 2048
+.data -2049
 .data a, b, c, d
 .data 3, 4, 6.5, 9
 
