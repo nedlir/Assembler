@@ -8,7 +8,6 @@ void free_label_linked_list(head *);
 void free_image_data_linked_list(head *);
 void free_image_code_linked_list(head *);
 void free_all(line *, head *, head *, head *);
-void print_symbol_list(head *);
 
 
 
