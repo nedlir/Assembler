@@ -1,3 +1,2 @@
-*.c
-*.h
-makefile
+*.o
+*.exe
