@@ -7,7 +7,7 @@
 
 ## About
 
-This two pass assembler was written for an [imaginary computer](##computer-and-language-structure) as a final project of the course *[20465 - Systems Programming in C](https://openu.ac.il/courses/20465.htm)* (full assignment details [here](readme/assignment.pdf)).
+This two pass assembler was written for an [imaginary computer](#computer-and-language-structure) as a final project of the course *[20465 - Systems Programming in C](https://openu.ac.il/courses/20465.htm)* (full assignment details [here](readme/assignment.pdf)).
 
 The project was written in collaboration with [@yuzev](https://github.com/yuzev).
 
@@ -144,11 +144,15 @@ When the assembler receives input in assembly language, it has to go over the in
 The assembler has 2 linked lists representing the Image Code and Image Data and another linked list representing the Symbol Table.
 
 Symbol Table - will be updated during first pass with the addresses of the instructions.
+
 Image Code - represents machine code of all the command sentences.
+
 Image Data - represents machine code of all the instruction sentences.
 
 Using an instruction counter, each instruction is being added to the counter, ensuring the next instruction will be assigned to free memory space.
   
 At first pass, the symbols (labels) in the program are recognized and are assigned a unique number representation in the memory.
 
-At second pass, using the symbol values, the machine code is built.
+At second pass, using the symbol values, the machine code is built. The instruction's addresses are updated from the symbol table.
+
+If any errors are found during first pass (and second), the program will continue to the next file.
